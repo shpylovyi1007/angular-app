@@ -6,8 +6,16 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'angular-app';
+  linkTitle = 'Підказка для посилання';
+
+  inlineStyle = {
+    width: '100px',
+    background: 'green',
+  };
+
+  cssStyle = 'blue';
 }

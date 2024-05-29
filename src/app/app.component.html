@@ -27,9 +27,24 @@
   [name]="parentName"
   (nameChange)="setNewName($event)"
 ></app-child> -->
-<app-child [(name)]="parentName"></app-child>
+<!-- <app-child [(name)]="parentName"></app-child>
 <p>Name parent {{ parentName }}</p>
 
 <button (click)="setNewName('імя задане за допомогою батька')">
   parent button
-</button>
+</button> -->
+<app-child>
+  <p style="background-color: aqua">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+    exercitationem?
+  </p>
+  <div style="background-color: salmon" someAttribute>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, molestiae?
+  </div>
+  <article style="background-color: darkblue" class="css-class">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, natus.
+  </article>
+  <div class="css-span">
+    <span>Lorem ipsum dolor sit amet.</span>
+  </div>
+</app-child>

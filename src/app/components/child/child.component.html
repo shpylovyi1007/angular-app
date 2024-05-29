@@ -1,7 +1,21 @@
 <!-- <h2 [style.color]="childColor">{{ name }}</h2> -->
 
-<button (click)="changeName()">Change emit</button>
+<!-- <button (click)="changeName()">Change emit</button>
 
 <p>Name child {{ name }}</p>
 
-<button (click)="changeName()">child button</button>
+<button (click)="changeName()">child button</button> -->
+
+<header>
+  header child component
+  <ng-content select="[someAttribute]"></ng-content>
+</header>
+<main>
+  html structure
+  <ng-content select=".css-class"></ng-content>
+</main>
+<footer>
+  footer child component
+  <ng-content select="p"></ng-content>
+</footer>
+<ng-content select=".css-span"></ng-content>

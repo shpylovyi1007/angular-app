@@ -1,8 +1,35 @@
-<h1>{{ title }}</h1>
+<!-- <h1>{{ title | titlecase }}</h1>
+<h1>{{ title | uppercase }}</h1>
+<h1>{{ title | lowercase }}</h1>
+<h1>{{ title | json }}</h1>
+
+<p>{{ arrUsers | sort : "age" | json }}</p>
 
 <a [title]="linkTitle" href="">Link</a>
 
 <p class="par">Style</p>
 <p style="color: red">Style</p>
-<p [class]="cssStyle">Style</p>
 <p [style]="inlineStyle">Style</p>
+
+<button [style.color]="color" (click)="changeColor('yellow')">Button</button>
+<p [style.color]="color">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, in.
+</p>
+
+<input
+  type="text"
+  (input)="checkCurrentValue($event)"
+  (keydown.shift)="this.color = 'pink'"
+/> -->
+
+<!-- <app-child
+  [childColor]="color"
+  [name]="parentName"
+  (nameChange)="setNewName($event)"
+></app-child> -->
+<app-child [(name)]="parentName"></app-child>
+<p>Name parent {{ parentName }}</p>
+
+<button (click)="setNewName('імя задане за допомогою батька')">
+  parent button
+</button>

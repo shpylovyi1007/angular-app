@@ -33,7 +33,7 @@
 <button (click)="setNewName('імя задане за допомогою батька')">
   parent button
 </button> -->
-<app-child>
+<!-- <app-child>
   <p style="background-color: aqua">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
     exercitationem?
@@ -47,4 +47,24 @@
   <div class="css-span">
     <span>Lorem ipsum dolor sit amet.</span>
   </div>
-</app-child>
+</app-child> -->
+
+<!-- <p>first paragraph</p>
+<ng-template #tm>
+  <p>paragraf in template</p>
+</ng-template>
+<p>second paragraph</p>
+
+<ng-container *ngTemplateOutlet="tm"></ng-container> -->
+
+<p>first paragraph</p>
+<ng-container
+  *ngTemplateOutlet="tmpl; context: { $implicit: 'Hello', some: 'world' }"
+></ng-container>
+<p>second paragraph</p>
+
+<ng-template #tmpl let-text let-some="some">
+  <p>paragraph in template</p>
+  <p>{{ text }}</p>
+  <p>{{ some }}</p>
+</ng-template>

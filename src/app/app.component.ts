@@ -6,6 +6,7 @@ import { LowerCasePipe } from '../my-pipe';
 import { JsonPipe } from '../my-pipe';
 import { SortPipe } from '../my-pipe';
 import { ChildComponent } from './components/child/child.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ChildComponent } from './components/child/child.component';
     JsonPipe,
     SortPipe,
     ChildComponent,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

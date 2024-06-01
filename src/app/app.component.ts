@@ -40,7 +40,7 @@ export class AppComponent {
       this.arrUsers.push({ age: 21 });
     }, 3000);
   }
-  color = 'green';
+  color = 'aqua';
   parentName: string = 'hello world';
   changeColor(newColor: string) {
     this.color = newColor;
@@ -54,4 +54,19 @@ export class AppComponent {
   setNewName(newName: string) {
     this.parentName = newName;
   }
+
+  togle: boolean = true;
+
+  arr: any[] = [1, 'fvv', true, [1, 2, 3]];
+
+  obj: any = {
+    first: {
+      second: {
+        third: {
+          name: 'Make',
+          age: 20,
+        },
+      },
+    },
+  };
 }

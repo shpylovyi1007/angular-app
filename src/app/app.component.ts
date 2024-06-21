@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TitleCasePipe } from '../my-pipe';
 import { UpperCasePipe } from '../my-pipe';
@@ -26,47 +26,46 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'angular app';
-  linkTitle = 'Підказка для посилання';
 
-  inlineStyle = {
-    width: '100px',
-    height: '20px',
-    background: 'darkblue',
-  };
+  @viewChild('paragraph') paragraph: any;
+  @viewChild('template') template: any;
+  @viewChild('child') child: any;
 
-  arrUsers = [{ age: 16 }, { age: 20 }, { age: 23 }];
-  constructor() {
-    setTimeout(() => {
-      this.arrUsers.push({ age: 21 });
-    }, 3000);
-  }
-  color = 'aqua';
-  parentName: string = 'hello world';
-  changeColor(newColor: string) {
-    this.color = newColor;
-  }
-
-  checkCurrentValue(event: Event) {
-    const target = event.target as HTMLInputElement;
-
-    console.log(target.value);
-  }
-  setNewName(newName: string) {
-    this.parentName = newName;
-  }
-
-  togle: boolean = true;
-
-  arr: any[] = [1, 'fvv', true, [1, 2, 3]];
-
-  obj: any = {
-    first: {
-      second: {
-        third: {
-          name: 'Make',
-          age: 20,
-        },
-      },
-    },
-  };
+  // name = 'name user';
+  // linkTitle = 'Підказка для посилання';
+  // inlineStyle = {
+  //   width: '100px',
+  //   height: '20px',
+  //   background: 'darkblue',
+  // };
+  // arrUsers = [{ age: 16 }, { age: 20 }, { age: 23 }];
+  // constructor() {
+  //   setTimeout(() => {
+  //     this.arrUsers.push({ age: 21 });
+  //   }, 3000);
+  // }
+  // color = 'aqua';
+  // parentName: string = 'hello world';
+  // changeColor(newColor: string) {
+  //   this.color = newColor;
+  // }
+  // checkCurrentValue(event: Event) {
+  //   const target = event.target as HTMLInputElement;
+  //   console.log(target.value);
+  // }
+  // setNewName(newName: string) {
+  //   this.parentName = newName;
+  // }
+  // toggler: boolean = true;s
+  // arr: any[] = [1, 'fvv', true, [1, 2, 3]];
+  // obj: any = {
+  //   first: {
+  //     second: {
+  //       third: {
+  //         name: 'Make',
+  //         age: 20,
+  //       },
+  //     },
+  //   },
+  // };
 }

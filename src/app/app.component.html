@@ -76,15 +76,21 @@
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, reiciendis!
 </p> -->
 
-<!-- <button (click)="togle = !togle">BTN</button>
+<!-- <button (click)="toggler = !toggler">BTN Toggler</button> -->
 
-<ng-template #text>Text from ng-template</ng-template>
+<!-- <ng-template #text>Text from ng-template</ng-template> -->
 
-<p *ngIf="togle; then text; else second">
+<!-- <p *ngIf="toggler">
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, reiciendis!
 </p>
 
-<ng-template #second>Text from second ng-template</ng-template>
+@if (toggler) {
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, reiciendis!
+</p>
+} -->
+
+<!-- <ng-template #second>Text from second ng-template</ng-template>
 <ng-template></ng-template> -->
 
 <!-- <div *ngFor="let item of arr; let evenItem = even; let currentIndex = index">
@@ -130,3 +136,13 @@
   autem fugit sed doloremque voluptas id cupiditate illum laborum nostrum, sint
   ducimus repudiandae. Reiciendis, minus sit! Accusamus, nulla eos.
 </p> -->
+
+<!-- @if(toggler) {
+<app-child [title]="title" [name]="name"></app-child>
+} -->
+
+<p #paragraph>simple text</p>
+
+<ng-template #template>text from ng-template</ng-template>
+
+<app-child #child>text from child component</app-child>
